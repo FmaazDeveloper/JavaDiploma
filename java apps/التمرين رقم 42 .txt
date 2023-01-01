@@ -1,0 +1,32 @@
+package app;
+import javax.swing.JOptionPane;
+class app {
+	public static void main(String[] args) {
+		int n ;
+		n=Integer.parseInt(JOptionPane.showInputDialog("أدخل عدد المشتركين "));
+		if (n>0)
+		{
+			int age2;
+			int age[] = new int [n];
+			String p = "الأعمار تصاعديا هي " + "\n";
+			for (int i=0; i<n; i++)
+			{
+				age[i]=Integer.parseInt(JOptionPane.showInputDialog("أدخل أعمار المشتركين "));
+			}
+			for (int i=1; i<n; i++)
+			{
+				for (int j=0; j<n-1; j++)				
+			if (age[j]>age[j+1])
+			{
+				age2 = age[j];
+				age[j] = age[j+1];
+				age[j+1] = age2;
+			}
+				for (int k=0; k<n; k++)
+					
+					p += age[k] + "\n" ;
+			}
+				JOptionPane.showMessageDialog(null, p);
+		}
+}
+} 

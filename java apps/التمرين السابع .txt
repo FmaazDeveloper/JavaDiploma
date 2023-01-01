@@ -1,0 +1,63 @@
+package app;
+import javax.swing.JOptionPane;
+class app {
+
+	public static void main(String[] args) {
+    	int n ;
+    		n=Integer.parseInt(JOptionPane.showInputDialog("enter the number of worker : "));
+    	   
+			int hight = n -1 ;
+    		int m [] = new int [n] ;
+    		int salary [] = new int [n] ;
+    		int sealse [] = new int [n] ;
+    		int add = sealse[hight] + 5000;
+    		int tsalary [] = new int [n] ;
+    		String name [] = new String [n] ;
+    		String name2 [] = new String [n] ;
+    		for (int i=0; i<n; i++)
+    		{
+				name[i] = JOptionPane.showInputDialog("enter the name : ");
+    			salary[i]=Integer.parseInt(JOptionPane.showInputDialog("enter the salary : "));
+    			sealse[i]=Integer.parseInt(JOptionPane.showInputDialog("enter the sealse : "));
+        		tsalary [i] = (int) (salary [i] + (sealse[i] * 0.025));
+        		salary [hight] = salary[hight] + add ;
+    		}
+            String title = "the result are ";
+            String output = "Array contens in original order :\n ";
+            for(int i=0; i<m.length; i++)
+            {
+                output += name[i] + " " + salary[i] + " " + sealse[i] + " " + tsalary[i] + "\n" ;
+            }
+            		   for(int i=1; i<m.length; i++)
+            		   {
+            			   for(int j=0; j<m.length-1; j++)
+            			   {
+            				   if(m[j] > m[j+1])
+                			   {
+            					   salary[i] = m[j] ;
+                				   m[j] = m[j+1] ;
+                				   m[j+1] = salary[i] ;
+                				   
+                				   name[i] = name2[j] ;
+                				   name2[j] = name2[j+1] ;
+                				   name2[j+1] = name[j] ;
+                				   
+                				   tsalary[j] = m[j] ;
+                				   m[j] = m[j+1] ;
+                				   m[j+1] = tsalary[j] ;
+                				   
+                				   sealse[i] = m[j] ;
+                				   m[j] = m[j+1] ;
+                				   m[j+1] = sealse[j] ;
+                			   } 
+            			   }  			   
+            		   }
+                       output += "\n\nArray contens in ascending order : \n"; 
+                       for(int i=0; i<m.length; i++)
+                       {
+                           output += "The name is : " + name[i] + " , The salary is : " + salary[i] + " , The sealse is  : " + sealse[i] + " , The total of sealse is : " + tsalary[i] + " " + "\n" ;
+                       }
+//                       JOptionPane.showMessageDialog(null , output , title , JOptionPane.INFORMATION_MESSAGE );
+                       System.out.println(output);
+}
+}

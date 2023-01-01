@@ -1,0 +1,51 @@
+package app;
+import javax.swing.JOptionPane;
+class app {
+
+	public static void main(String[] args) {
+    	int n , a;
+    	n=Integer.parseInt(JOptionPane.showInputDialog("enter the number : "));
+		int m[] = new int [n];
+		for (int i=0; i<n; i++)
+		{
+    		m[i]=Integer.parseInt(JOptionPane.showInputDialog("enter the number into the array : "));
+		}
+		a=Integer.parseInt(JOptionPane.showInputDialog("enter the number : "));
+		int x[] = new int [a];
+		for (int i=0; i<a; i++)
+		{
+    		x[i]=Integer.parseInt(JOptionPane.showInputDialog("enter the number into the array : "));
+		}    
+		int b = 0 ;
+//		if (n>a)
+//			b = b + n ;
+//		else if (a>n)
+//			b = b + a ;
+		
+			if (n == a)
+			{
+				System.out.print("طول المصفوفة متساوي" + "\n");
+			}
+			if (n != a)
+			{
+				System.out.print("طول المصفوفة غير متساوي" + "\n");
+			}
+         for (int i=0; i<n; i++)
+         {
+        	 if (m[i] == x[i])
+        	 {
+            	System.out.print("الاعداد المدخلة متطابقة" + "\n");
+            	break ;
+        	 }
+         }
+         for (int i=0; i<n; i++)
+         {
+        	 if (m[i] != x[i])
+        	 {
+            	System.out.print("الاعداد المدخلة غير متطابقة" + "\n");
+            	break ;
+        	 }
+         }
+		
+}
+}

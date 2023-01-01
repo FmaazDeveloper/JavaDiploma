@@ -1,0 +1,19 @@
+package app;
+import javax.swing.JOptionPane;
+class app {
+	static double min (double x , double y , double z)
+	{
+		double t = Math.min(Math.min(x, y), z) ;
+		return t ;
+	}
+	public static void main(String[] args) {
+			 String p = "أقل رقم هو " + "\n";
+			 double x,y,z;
+			 x=Double.parseDouble(JOptionPane.showInputDialog("ادخل الأول "));
+			 y=Double.parseDouble(JOptionPane.showInputDialog("ادخل الثاني "));
+			 z=Double.parseDouble(JOptionPane.showInputDialog("ادخل الثالث "));
+					p += min(x,y,z) + "\n";
+				 JOptionPane.showMessageDialog(null, p);
+		
+}
+} 

@@ -1,0 +1,55 @@
+package app;
+import javax.swing.JOptionPane;
+class app {
+	public static void main(String[] args) {
+	  int n , m , x;
+	  n=Integer.parseInt(JOptionPane.showInputDialog("كم رقم تستطيع ذاكرتك تذكره ؟"));
+	  m=Integer.parseInt(JOptionPane.showInputDialog("كم العدد الخانات التي تريدها ؟" + "\n" + "1 : 0-9" + "\n" + "2 : 0-99" + "\n" + "3 : 0-999" + "\n" + "4 : 0-9999"));
+          switch (m)
+            {
+                case 1:
+                    x = 10;
+                    break;
+                case 2:
+                    x = 100;
+                    break;
+                case 3 :
+                    x = 1000;
+                    break;
+                case 4:
+                    x = 10000;
+                    break;
+                default:
+                    x = 0;
+                    JOptionPane.showMessageDialog(null,"الرقم المدخل يجب أن يكون " + "\n" + "1 | 2 | 3 | 4");
+            }
+      int math [] = new int [n];
+      int user [] = new int [n];
+      int s = 0;
+        if(m > 0 && m <=4)
+        {
+            	  for (int i=0; i<n; i++)
+	  {
+		  math[i] = (int)(Math.random()*x);
+		  JOptionPane.showMessageDialog(null, math[i]);
+	  }	
+		for (int i=0; i<n; i++)
+		  {
+			  user[i] =Integer.parseInt(JOptionPane.showInputDialog("أدخل العدد رقم " + (i+1) + " "));
+			  if (math[i] == user[i])
+			   s += 1 ;
+			  else
+			  {
+					JOptionPane.showMessageDialog(null,"خطأ ");
+					for (int j=1; j<=n-i; j++)
+					JOptionPane.showMessageDialog(null,"العدد رقم " + (i+j) + " هو : " + math[j-1+i]);
+			      break;
+			  }
+		  }
+		if (s==n)
+			JOptionPane.showMessageDialog(null,"أحسنت لقد فزت ");
+		else
+			JOptionPane.showMessageDialog(null,"حاول مرة أخرى ");
+        }
+}
+}

@@ -1,0 +1,24 @@
+package app;
+import javax.swing.JOptionPane;
+class app {
+
+	public static void main(String[] args) {
+    	int n ;
+    		n=Integer.parseInt(JOptionPane.showInputDialog("enter the number : "));
+    		int m[] = new int [n];
+    	    int x = m[0];
+    		for (int i=0; i<n; i++)
+    		{
+        		m[i]=Integer.parseInt(JOptionPane.showInputDialog("enter the number into the array : "));
+    		}
+    		for (int i=0; i<n; i++)
+    		{
+    			if ( x < m[i])
+    			{
+    				x = m[i];
+    			}
+    		}
+    		
+    		System.out.println(x);
+}
+}

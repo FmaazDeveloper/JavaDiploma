@@ -1,0 +1,48 @@
+package app;
+import javax.swing.JOptionPane;
+class app {
+
+	public static void main(String[] args) {
+    	int n ;
+    		n=Integer.parseInt(JOptionPane.showInputDialog("enter the number : "));
+    		int m[] = new int [n];
+    		int total = 0 ;
+    		int x = 0 ;
+    		int y = 0 ;
+    		int s = 0 ;
+    		for (int i=0; i<n; i++)
+    		{
+        		m[i]=Integer.parseInt(JOptionPane.showInputDialog("enter the number into the array : "));
+    		}
+    		
+    		for (int i=0; i<n; i++)
+    		{    	
+    			total += m[i] ;
+    		}     
+    		int avreg = total / n ;
+    		for (int i=0; i<n; i++)
+    		{
+    			if (m[i] % 2 == 0)
+    			{
+    				x = x + 1 ;
+                }		
+    		}    	
+    		
+    		for (int i=0; i<n; i++)
+    		{
+    			if (m[i] % 2 == 1)
+    			{
+    				y = y + 1 ;
+                }		
+    		}    		
+    		for (int i=0; i<n; i++)
+    		{
+    			if (m[i] == -m[i])
+    			{
+    				s = s + 1 ;
+                }		
+    		}    		
+    		System.out.println("The total is : " + total + " \n" + " عدد الاعداد الزوجية هو : " + x + " \n" + " عدد الاعداد الفردية هو : " + y + " \n" + " the avreg is : " + avreg + " \n" + " عدد الاعداد السالبة هو : " + s);
+
+}
+}

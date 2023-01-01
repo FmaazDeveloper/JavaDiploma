@@ -1,0 +1,33 @@
+package app;
+import javax.swing.JOptionPane;
+class app {
+	public static void main(String[] args) {
+	  int n ;
+	  n=Integer.parseInt(JOptionPane.showInputDialog("How many numbers can you memory remember ? "));
+      int math [] = new int [n];
+      int user [] = new int [n];
+      int s = 0;
+	  for (int i=0; i<n; i++)
+	  {
+		  math[i] = (int)(Math.random()*100);
+		  JOptionPane.showMessageDialog(null, math[i]);
+	  }	
+		for (int i=0; i<n; i++)
+		  {
+			  user[i] =Integer.parseInt(JOptionPane.showInputDialog("Enter the number " + (i+1) + " "));
+			  if (math[i] == user[i])
+			   s += 1 ;
+			  else
+			  {
+					JOptionPane.showMessageDialog(null,"fault ");
+					for (int j=1; j<=n-i; j++)
+					JOptionPane.showMessageDialog(null,"The number " + (i+j) + " is : " + math[j-1+i]);
+			      break;
+			  }
+		  }
+		if (s==n)
+			JOptionPane.showMessageDialog(null,"Well done you won ");
+		else
+			JOptionPane.showMessageDialog(null,"Try again ");
+}
+}

@@ -1,0 +1,25 @@
+package app;
+import javax.swing.JOptionPane;
+class app {
+
+	public static void main(String[] args) {
+    	int n ;
+    		n=Integer.parseInt(JOptionPane.showInputDialog("enter the number of student : "));
+    	   
+    		String s [] = new String [n] ;
+    		int m [] = new int [n] ;
+    		for (int i=0; i<n; i++)
+    		{
+    			s[i]=JOptionPane.showInputDialog("enter the student name : ");
+    			m[i]=Integer.parseInt(JOptionPane.showInputDialog("enter the marks : "));
+    		}
+    		for (int j=0; j<n; j++)
+    		{
+    			if(m[j]>=60)
+    			{
+    				System.out.print(s[j] + " ");
+    				System.out.println(m[j]);
+    			}
+    		}
+}
+}

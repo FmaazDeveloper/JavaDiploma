@@ -1,0 +1,33 @@
+package app;
+import javax.swing.JOptionPane;
+class app {
+
+	public static void main(String[] args) {
+    	int n ;
+    	int x = 0 ;
+    		n=Integer.parseInt(JOptionPane.showInputDialog("enter the number : "));
+    		int m[] = new int [n];
+    		
+    		for (int i=0; i<n; i++)
+    		{
+        		m[i]=Integer.parseInt(JOptionPane.showInputDialog("enter any numbers : "));
+    		}
+    		
+    		for (int i=0; i<n; i++)
+    		{
+    			System.out.print(m[i] + " ");
+    			if (m[i] % 2 == 1)
+    			{
+        			x = x + 1 ;
+    			}	
+    		}       
+    		int s[] = new int [x];
+			System.out.print("\n");
+    		for (int i=0; i<x; i++)
+    		{
+    			s[i]=m[i];
+			System.out.print(s[i] + " " );
+    		}
+    		
+}
+}

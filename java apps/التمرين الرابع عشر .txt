@@ -1,0 +1,38 @@
+package app;
+import javax.swing.JOptionPane;
+class app {
+	
+	public static void main(String[] args) {
+		int n , m ;
+		n = Integer.parseInt(JOptionPane.showInputDialog("أدخل عدد المتدربين "));
+		m = Integer.parseInt(JOptionPane.showInputDialog("أدخل عدد المواد ")); 
+		int s [][] = new int [n][m];
+        double sum = 0;
+        double avg = 0;
+        String x = "كشف الدرجات لعدد " + n + " من المتدربين هو \n";
+        String d = "بيانات عدد " + n + " من المتدربين هي : \n";
+		for (int i=0; i<n; i++)
+		{
+			JOptionPane.showMessageDialog(null, "أدخل درجات المتدرب رقم " + (i+1) + " : ");
+			for (int j=0; j<m; j++)
+			{
+				 s [i][j] = Integer.parseInt(JOptionPane.showInputDialog("أدخل الدرجة للمادة رقم " + (j+1) + " : "));
+				 sum += s[i][j];
+			}
+			 avg += sum/m;
+			x += "مجموع درجات المتدرب رقم " + (i+1) + " هي : " + sum + " متوسط درجاته هي : " + avg + "\n";
+			 sum = 0 ;
+			 avg = 0 ;
+		}
+		for (int i=0; i<n; i++)
+		{
+			d += "المتدرب رقم " + (i+1) + " : "+ "\n";
+			for (int j=0; j<m; j++)
+			{
+				d += "درجة المادة رقم " + (j+1) + "هي : "+ s[i][j] + "\n"; 
+			}
+		}
+		
+		JOptionPane.showMessageDialog(null, d + x);
+}
+}

@@ -1,0 +1,16 @@
+package app;
+import javax.swing.JOptionPane;
+class app {
+    public static void main(String[] args) {
+    	int n ;
+    	int s = 0 ;
+    		n=Integer.parseInt(JOptionPane.showInputDialog("enter the number of rows : "));
+    	   
+    		while (n!=0)
+    			{
+    			s = n % 10 ;
+    		n /= 10 ;
+    			System.out.println(s) ;
+    			}		
+}
+}

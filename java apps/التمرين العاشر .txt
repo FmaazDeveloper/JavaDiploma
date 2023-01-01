@@ -1,0 +1,27 @@
+package app;
+import javax.swing.JOptionPane;
+class app {
+
+	public static void main(String[] args) {
+    	int n ;
+    	int total = 0 ;
+    		n=Integer.parseInt(JOptionPane.showInputDialog("enter the number : "));
+    		int m[] = new int [n];
+    		
+    		for (int i=0; i<n; i++)
+    		{
+        		m[i]=Integer.parseInt(JOptionPane.showInputDialog("enter the marks : "));
+    		}
+    		
+    		for (int i=0; i<n; i++)
+    		{    		
+    			total += m[i] ;
+    			System.out.print(m[i] + " ");
+    		}       
+    		for (int i=0; i<n-1; i++)
+    		{
+    			double avreg = total / n;
+    					System.out.println("The total is : " + total + " The avreg is : " + avreg );
+    					}
+}
+}

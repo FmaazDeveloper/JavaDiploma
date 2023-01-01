@@ -1,0 +1,39 @@
+package app;
+import javax.swing.JOptionPane;
+class app {
+
+	public static void main(String[] args) {
+    	int n ;
+    	double total = 0.0 ;
+    		n=Integer.parseInt(JOptionPane.showInputDialog("enter the number : "));
+    		double sal[] = new double [n];
+    		String name[] = new String [n];
+    		for (int i=0; i<n; i++)
+    		{
+        		name[i]=JOptionPane.showInputDialog("enter the name " + (i+1) + " : ");
+    			sal[i]=Double.parseDouble(JOptionPane.showInputDialog("enter the sal " + (i+1) + " : "));
+    		}
+    		for (int i=0; i<n; i++)
+    		{
+    			total = total + sal[i] ;
+    		}
+    		double avreg = total / n ;
+    		for (int i=0; i<n; i++)
+    		{
+    			if (avreg > sal[i])
+    			{
+    				System.out.println("+ The name is : " + name[i] + " The salary is : " + sal[i] + " The total is : " + total + " The avreg is : " + avreg);
+    			}
+    			else if (avreg < sal[i])
+    			{
+    				System.out.println("- The name is : " + name[i] + " The salary is : " + sal[i] + " The total is : " + total + " The avreg is : " + avreg);
+    			}
+    			else 
+    			{
+    				System.out.println("The name is : " + name[i] + " The salary is : " + sal[i] + " The total is : " + total + " The avreg is : " + avreg);
+
+    			}
+    		}
+    			
+}
+}

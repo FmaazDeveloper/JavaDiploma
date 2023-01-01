@@ -1,0 +1,17 @@
+package app;
+import javax.swing.JOptionPane;
+class app {
+	
+	public static void main(String[] args) {
+		
+		int x;
+		int s;
+		x = Integer.parseInt(JOptionPane.showInputDialog("أدخل عدد  " + "\n" + "لإيجاد المعادلات التالية : " + "\n" + "القيمة المطلقة " + "\n" + "الجذر التربيعي " + "\n" + "الأس "));
+		s = Integer.parseInt(JOptionPane.showInputDialog("أدخل الأس "));
+		double abs = Math.abs(x);
+		double sqrt = Math.sqrt(x);
+		double pow = Math.pow(x, s);
+		String p =  "القيمة المطلقة للعدد " + x + " هي : " + abs + "\n" + "الجذر التربيعي للعدد " + x + " هو : " + sqrt + "\n" + "الأس للعدد " + x + " هو : " + pow ;
+		JOptionPane.showMessageDialog(null, p);
+}
+}
